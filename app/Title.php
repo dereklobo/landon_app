@@ -8,5 +8,5 @@ use App\ReadOnlyBase;
 class Title extends ReadOnlyBase
 {
     //
-    protected $title_array = ['Mr','Mrs','Ms','Dr','Mx'];
+    protected $title_array = ['Mr','Mrs','Ms','Dr','Mx','Professor'];
 }
