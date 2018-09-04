@@ -21,6 +21,23 @@
             <li role="menuitem"><a href="/reservation">Reservations</a></li>
           </ul>
         </div>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu="49qhhm-dropdown-menu" role="menubar">
+          @if(Auth::check())
+            <small class="blog-nav-item " style="float:right" href="#">{{Auth::user()->name}}</small>
+          @endif
+            <li role="menuitem"><a href="{{ route('logout') }}"
+              onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+              Logout
+              </a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+              </form></li>
+            
+          </ul>
+        </div>
       </div>
     </div>
     <!-- End Top Bar -->
